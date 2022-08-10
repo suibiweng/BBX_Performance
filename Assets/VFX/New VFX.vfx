@@ -1885,7 +1885,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0.55
+      m_SerializableObject: 0.38
     m_Space: 2147483647
   m_Property:
     name: Size
@@ -1946,7 +1946,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0.03
+      m_SerializableObject: 0.06
     m_Space: 2147483647
   m_Property:
     name: Alpha
@@ -2083,7 +2083,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: -5.66
+      m_SerializableObject: 0.13
     m_Space: 2147483647
   m_Property:
     name: dragCoefficient
