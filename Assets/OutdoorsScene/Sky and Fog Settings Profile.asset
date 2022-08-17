@@ -566,7 +566,11 @@ MonoBehaviour:
     m_Value: 0
   limitMin:
     m_OverrideState: 1
+<<<<<<< HEAD
     m_Value: 2.5538464
+=======
+    m_Value: 10.94224
+>>>>>>> b50e2e31e4ca0710bfc44fe828d7738ee87b218a
   limitMax:
     m_OverrideState: 1
     m_Value: 14
