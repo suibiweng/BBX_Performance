@@ -2101,13 +2101,13 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: -27.8
+      - m_Value: 2.86
         m_Name: PosZ
         m_Overridden: 1
-      - m_Value: 0.37
+      - m_Value: 1.36
         m_Name: New float
         m_Overridden: 1
-      - m_Value: 12.08
+      - m_Value: 5
         m_Name: Radius
         m_Overridden: 1
     m_Vector2f:
@@ -2547,7 +2547,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 82.96148
+  field of view: 78
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -2555,7 +2555,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 7278dbd0978f75a4f9f2b4def4d39878, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
@@ -2695,7 +2695,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249154941}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.19609644, y: 3.84, z: -20.56}
+  m_LocalPosition: {x: 1.39, y: 3, z: -18.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2713,7 +2713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45099d624c1e6c14e9514f4e5ea1ed9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spoutName: BBX
+  _spoutName: Spout Sender
   _keepAlpha: 0
   _captureMethod: 2
   _sourceCamera: {fileID: 1249154942}
@@ -3171,7 +3171,7 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 4.37
+      - m_Value: -4.09
         m_Name: PosZ
         m_Overridden: 1
       - m_Value: 0.75
@@ -4023,6 +4023,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1935305078}
   - component: {fileID: 1935305079}
+  - component: {fileID: 1935305080}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -4071,6 +4072,22 @@ MonoBehaviour:
   - {r: 1, g: 0.85098046, b: 0.40000004, a: 1}
   - {r: 0.5568628, g: 0.48627454, b: 0.76470596, a: 1}
   trustValue: 0
+--- !u!114 &1935305080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935305077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4efb8755fb7253944822a868d7b4126e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  datain: 
+  manager: {fileID: 1935305079}
+  port: 8001
+  PrintDebug: 1
 --- !u!1 &1952820742
 GameObject:
   m_ObjectHideFlags: 0
@@ -4084,7 +4101,7 @@ GameObject:
   - component: {fileID: 1952820744}
   - component: {fileID: 1952820743}
   - component: {fileID: 1952820748}
-  - component: {fileID: 1952820747}
+  - component: {fileID: 1952820749}
   m_Layer: 0
   m_Name: P0
   m_TagString: Untagged
@@ -4169,25 +4186,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1952820747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952820742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51ea4a27c5e58a544a213e784cc61190, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _useDefaultDevice: 1
-  _deviceID: 
-  _channel: 0
-  _resolution: 512
-  _autoGain: 1
-  _gain: 0
-  _dynamicRange: 80
 --- !u!114 &1952820748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4208,6 +4206,41 @@ MonoBehaviour:
   amt: 0
   animator: {fileID: 0}
   setColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &1952820749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952820742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c3e183ec27ba64d83e010bf18edb92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _useDefaultDevice: 0
+  _deviceID: '{0.0.1.00000000}.{5a9eabdc-9908-4f08-9e5b-33724576fab5}'
+  _channel: 0
+  _filterType: 0
+  _autoGain: 1
+  _gain: 6
+  _dynamicRange: 12
+  _smoothFall: 1
+  _fallSpeed: 0.3
+  _propertyBinders:
+  - id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: FloatPropertyBinder, ns: Lasp, asm: Lasp.Runtime}
+      data:
+        Enabled: 1
+        Target: {fileID: 0}
+        PropertyName: 
+        _propertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+        Value0: 0
+        Value1: 1
 --- !u!1 &1974219889
 GameObject:
   m_ObjectHideFlags: 0

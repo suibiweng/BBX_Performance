@@ -8,6 +8,7 @@ using System.Threading;
 
 public class UDPServer : MonoBehaviour
 {
+    public string datain;
     public Manager manager;
     Thread receiveThread;
     UdpClient client;
@@ -30,7 +31,7 @@ public class UDPServer : MonoBehaviour
     {
         if (PrintDebug)
             Debug.Log("Received: " + obj);
-
+        datain=obj;
 
         if (obj.StartsWith("Podium")) {
 

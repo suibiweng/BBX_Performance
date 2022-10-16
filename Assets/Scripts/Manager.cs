@@ -9,7 +9,7 @@ public class Manager : MonoBehaviour
     public Podium[] podiums;
     public Color[] ScaleColors;
     public float trustValue;
-    
+    float lastValue=-100;
 
     // Start is called before the first frame update
     void Start()
@@ -89,7 +89,17 @@ public class Manager : MonoBehaviour
 
     public void updateTrustValue(float v) {
 
-        trustValue = v;
+
+        if(lastValue != v){
+            trustValue = lastValue-v;
+lastValue=v;
+
+
+        }
+      //  trustValue = v;
+
+
+
     }
 
 
