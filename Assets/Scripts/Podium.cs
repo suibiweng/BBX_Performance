@@ -7,7 +7,8 @@ public class Podium : MonoBehaviour
 {
     public VisualEffect Vfx;
 
-
+    public bool isLocked;
+    public bool ison;
 
 
     public float First, Second;
@@ -16,7 +17,7 @@ public class Podium : MonoBehaviour
 
     public Animator animator;
 
-    public Color serColor;
+    public Color setColor;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,13 +35,21 @@ public class Podium : MonoBehaviour
 
     }
 
-    public void TurnOFF()
-    {
+    public void setOnoff(bool on) {
+
+        if (on) {
+            ison = true;
 
 
+        } else {
+            ison = false;
+
+        }
 
 
     }
+
+
     
 
 

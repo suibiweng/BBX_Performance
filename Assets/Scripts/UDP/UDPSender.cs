@@ -27,7 +27,7 @@ public class UDPSender : MonoBehaviour
         remoteEndPoint = new IPEndPoint(IPAddress.Parse(IP), port);
         client = new UdpClient();
         //
-        clientTCP = new TcpClient();
+      //  clientTCP = new TcpClient();
     }
 
     public void SendString(string message)

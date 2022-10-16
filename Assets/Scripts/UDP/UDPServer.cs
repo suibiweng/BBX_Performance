@@ -8,6 +8,7 @@ using System.Threading;
 
 public class UDPServer : MonoBehaviour
 {
+    public Manager manager;
     Thread receiveThread;
     UdpClient client;
 
@@ -29,6 +30,36 @@ public class UDPServer : MonoBehaviour
     {
         if (PrintDebug)
             Debug.Log("Received: " + obj);
+
+
+        if (obj.StartsWith("Podium")) {
+
+            string[] data = obj.Split(',');
+
+
+            int id = int.Parse(data[1]);
+            manager.setPodiumColor(id,data[2]);
+        }
+
+
+        if (obj.StartsWith("oxy_present")) {
+            string[] data = obj.Split(',');
+
+
+            manager.updateTrustValue(float.Parse(data[1]));
+
+        }
+
+        if (obj.StartsWith("oxy_end")) {
+            string[] data = obj.Split(',');
+            manager.updateTrustValue(float.Parse(data[1]));
+
+        }
+
+
+
+
+
     }
 
     private void init()
@@ -50,11 +81,16 @@ public class UDPServer : MonoBehaviour
              
                 string text = Encoding.ASCII.GetString(data);
                 OnUDPMessage(text);
-                print(text);
+
             } catch (Exception err) {
                 print(err.ToString());
             }
         }
     }
+
+
+    
+
+
 
 }
