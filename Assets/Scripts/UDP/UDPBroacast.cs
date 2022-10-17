@@ -9,20 +9,18 @@ using System.Text;
 
 public class UDPBroacast : MonoBehaviour
 {
+
+public int PORT = 9876;
+UdpClient udpClient = new UdpClient();
+
+
     // Start is called before the first frame update
     void Start()
     {
 
-        Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+        udpClient.Client.Bind(new IPEndPoint(IPAddress.Any, PORT));
 
-        IPAddress broadcast = IPAddress.Parse("192.168.0.255");
 
-        byte[] sendbuf = Encoding.ASCII.GetBytes("Hello World!");
-        IPEndPoint ep = new IPEndPoint(broadcast, 11000);
-
-        s.SendTo(sendbuf, ep);
-
-        Console.WriteLine("Message sent to the broadcast address");
 
     }
 
@@ -31,4 +29,12 @@ public class UDPBroacast : MonoBehaviour
     {
         
     }
+
+    public void broadcastTo(string cmd){
+        var from = new IPEndPoint(0, 0);
+        var data = Encoding.UTF8.GetBytes(cmd);
+        udpClient.Send(data, data.Length, "255.255.255.255", PORT);
+    }
+
+
 }

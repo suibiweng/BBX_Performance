@@ -5,6 +5,9 @@ using UnityEngine.VFX;
 
 public class Podium : MonoBehaviour
 {
+
+    public UDPBroacast SendBackUdp;
+
     public VisualEffect Vfx;
 
     public bool isLocked;
@@ -13,6 +16,8 @@ public class Podium : MonoBehaviour
 
     public float Far, Near;
     public float amt;
+
+    public int ID;
 
 
     public Animator animator;
@@ -35,10 +40,12 @@ public class Podium : MonoBehaviour
 
         if (on) {
             ison = true;
+            SendBackUdp.broadcastTo("Podium:"+ID+",on");
 
 
         } else {
             ison = false;
+             SendBackUdp.broadcastTo("Podium:"+ID+",off");
 
         }
 
