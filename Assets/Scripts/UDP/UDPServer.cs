@@ -78,6 +78,9 @@ public class UDPServer : MonoBehaviour
             try {
                 IPEndPoint anyIP = new IPEndPoint(IPAddress.Any, 0);
                 byte[] data = client.Receive(ref anyIP);
+
+                print (("Ping was sent from " + anyIP.Address.ToString() +
+                             " on their port number " + anyIP.Port.ToString()));
              
                 string text = Encoding.ASCII.GetString(data);
                 OnUDPMessage(text);
@@ -86,6 +89,14 @@ public class UDPServer : MonoBehaviour
                 print(err.ToString());
             }
         }
+    }
+
+
+
+       public void broadcastTo(string cmd){
+        var from = new IPEndPoint(0, 0);
+        var data = Encoding.UTF8.GetBytes(cmd);
+        client.Send(data, data.Length, "255.255.255.255", port);
     }
 
 

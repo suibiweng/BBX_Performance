@@ -28,12 +28,23 @@ public class Podium : MonoBehaviour
     {
         Vfx=GetComponentInChildren<VisualEffect>();
 
+        SendBackUdp=FindObjectOfType<UDPBroacast>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
             VFXBind();
+            
+        if(Input.GetKeyDown(KeyCode.Space)){
+
+ SendBackUdp.broadcastTo("Podium:"+ID+",on");
+
+
+
+        }
+            
     }
 
     public void setOnoff(bool on) {
