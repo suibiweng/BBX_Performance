@@ -2180,7 +2180,7 @@ VisualEffect:
       - m_Value: 3.91
         m_Name: New float
         m_Overridden: 1
-      - m_Value: 2.1
+      - m_Value: 2.25
         m_Name: Radius
         m_Overridden: 1
     m_Vector2f:
@@ -2294,7 +2294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54120154a655cb84da1cd9ed4bd0f616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfx: {fileID: 0}
+  vfx: {fileID: 1116489989}
   ColorSet:
     serializedVersion: 2
     key0: {r: 1, g: 1, b: 1, a: 1}
@@ -2326,8 +2326,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   Near: 0
   Far: 0
-  BigR: 0
-  SmallR: 0
+  BigR: 2.25
+  SmallR: 0.4
   Radius: 0
   amt: 0
 --- !u!1 &1127172907
