@@ -45,8 +45,6 @@ public class UDPServer : MonoBehaviour
 
         if (obj.StartsWith("oxy_present")) {
             string[] data = obj.Split(',');
-
-
             manager.updateTrustValue(float.Parse(data[1]));
 
         }
@@ -54,6 +52,7 @@ public class UDPServer : MonoBehaviour
         if (obj.StartsWith("oxy_end")) {
             string[] data = obj.Split(',');
             manager.updateTrustValue(float.Parse(data[1]));
+            manager.TurnONthePodium();
 
         }
 

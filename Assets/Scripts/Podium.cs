@@ -11,7 +11,7 @@ public class Podium : MonoBehaviour
     public bool ison;
 
 
-    public float First, Second;
+    public float Far, Near;
     public float amt;
 
 
@@ -21,18 +21,14 @@ public class Podium : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       /* string s;
+        Vfx=GetComponentInChildren<VisualEffect>();
 
-        string s1 = "1.6";
-        string s2 = "1.6";
-        s = s1 + "," + s2;
-        */
     }
 
     // Update is called once per frame
     void Update()
     {
-
+            VFXBind();
     }
 
     public void setOnoff(bool on) {
@@ -45,6 +41,22 @@ public class Podium : MonoBehaviour
             ison = false;
 
         }
+
+
+    }
+
+    public void hit(){
+
+
+
+    }
+
+    void VFXBind(){
+        amt=GetComponent<BoxCollider>().size.z;
+
+        Vfx.SetFloat("PosZ",Mathf.Lerp(Far,Near,amt));
+        Vfx.SetVector4("PodColor",setColor);
+
 
 
     }
