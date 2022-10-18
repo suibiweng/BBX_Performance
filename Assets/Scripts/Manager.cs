@@ -155,20 +155,23 @@ musicianUpdate();
     public void updateTrustValue(float v) {
 
 
-        if(lastValue != v){
-            trustValue = lastValue-v;
-lastValue=v;
+        if (lastValue != v) {
+            //  trustValue = lastValue-v;
+            lastValue = v;
 
 
-        }
 
-        if(trustValue>=0){
 
-            TrustIndex++;
-        }
+            if (trustValue > lastValue) {
 
-        if(trustValue<0){
-            TrustIndex--;
+                TrustIndex++;
+            }
+
+            if (trustValue < lastValue) {
+                TrustIndex--;
+            }
+
+
         }
 
     if(TrustIndex>6){

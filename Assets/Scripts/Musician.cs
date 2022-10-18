@@ -45,7 +45,7 @@ public class Musician : MonoBehaviour
 
         vfx.SetFloat("PosZ",Mathf.Lerp(Far,Near,amt));
         vfx.SetGradient("Color",ColorSet);
-        //vfx.SetFloat("Radius",Radius);
+        vfx.SetFloat("Radius",Radius);
 
 
 

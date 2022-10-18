@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 81417068}
   - component: {fileID: 81417067}
+  - component: {fileID: 81417069}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -153,21 +154,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _connection: {fileID: 11400000, guid: 3a5ad1649d276b44eb26c962c4333f96, type: 2}
-  _oscAddress: /unity
-  _dataType: 3
+  _oscAddress: /audio
+  _dataType: 2
   _event:
     m_PersistentCalls:
       m_Calls: []
   _intEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1960420473}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_contactOffset
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -175,13 +176,37 @@ MonoBehaviour:
         m_CallState: 2
   _floatEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 81417069}
+        m_TargetAssemblyTypeName: getFlot, Assembly-CSharp
+        m_MethodName: get
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _vector2Event:
     m_PersistentCalls:
       m_Calls: []
   _vector3Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
+        m_MethodName: set_localScale
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _vector4Event:
     m_PersistentCalls:
       m_Calls: []
@@ -194,9 +219,9 @@ MonoBehaviour:
   _stringEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1960420475}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
-        m_MethodName: set_text
+      - m_Target: {fileID: 81417068}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: set_name
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -205,7 +230,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
 --- !u!4 &81417068
 Transform:
   m_ObjectHideFlags: 0
@@ -220,6 +245,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &81417069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81417066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25df6b24fe85ade40b3b16de7240a36f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  f: 0
 --- !u!1 &114060301
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,6 +287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4efb8755fb7253944822a868d7b4126e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  datain: 
+  manager: {fileID: 0}
   port: 8001
   PrintDebug: 1
 --- !u!4 &114060303
