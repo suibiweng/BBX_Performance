@@ -716,7 +716,7 @@ VisualEffect:
       - m_Value: 2.78
         m_Name: Range
         m_Overridden: 1
-      - m_Value: 8
+      - m_Value: 4
         m_Name: Turbulence1
         m_Overridden: 1
       - m_Value: 3
@@ -732,7 +732,7 @@ VisualEffect:
       - m_Value: {x: 115.76, y: 169.61, z: 193.25}
         m_Name: New Position_position
         m_Overridden: 1
-      - m_Value: {x: -8, y: -2, z: 5}
+      - m_Value: {x: -8, y: -3.65, z: 7.94}
         m_Name: Target_position
         m_Overridden: 1
     m_Vector4f:
@@ -2251,8 +2251,11 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: 0, y: 0, z: 0}
+      - m_Value: {x: -0.6230619, y: 3.227768, z: -12.65532}
         m_Name: Target_position
+        m_Overridden: 1
+      - m_Value: {x: 1.8728249, y: 1.8728249, z: 1.8728249}
+        m_Name: Target_scale
         m_Overridden: 1
     m_Vector4f:
       m_Array: []
@@ -3294,7 +3297,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450679585}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.82, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1952820746}
@@ -3547,7 +3550,7 @@ VisualEffect:
       - m_Value: {x: 115.76, y: 169.61, z: 193.25}
         m_Name: New Position_position
         m_Overridden: 1
-      - m_Value: {x: 10, y: 0, z: 5}
+      - m_Value: {x: 10, y: -0.47, z: 5}
         m_Name: Target_position
         m_Overridden: 1
     m_Vector4f:
@@ -4862,7 +4865,7 @@ VisualEffect:
       - m_Value: {x: 115.76, y: 169.61, z: 193.25}
         m_Name: New Position_position
         m_Overridden: 1
-      - m_Value: {x: 12, y: 2, z: 3}
+      - m_Value: {x: 12, y: 1.29, z: 8.44}
         m_Name: Target_position
         m_Overridden: 1
     m_Vector4f:
