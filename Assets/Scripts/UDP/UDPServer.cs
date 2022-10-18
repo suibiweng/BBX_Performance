@@ -29,8 +29,8 @@ public class UDPServer : MonoBehaviour
 
     private void LogMessage(string obj)
     {
-        if (PrintDebug)
-            Debug.Log("Received: " + obj);
+       // if (PrintDebug)
+    //        Debug.Log("Received: " + obj);
         datain=obj;
 
         if (obj.StartsWith("Podium")) {
@@ -45,13 +45,18 @@ public class UDPServer : MonoBehaviour
 
         if (obj.StartsWith("oxy_present")) {
             string[] data = obj.Split(',');
-            manager.updateTrustValue(float.Parse(data[1]));
+
+            string[] num = data[1].Split('e');
+            print(num[0]);
+
+
+            manager.updateTrustValue(double.Parse(num[0]));
 
         }
 
         if (obj.StartsWith("oxy_end")) {
             string[] data = obj.Split(',');
-            manager.updateTrustValue(float.Parse(data[1]));
+            manager.updateTrustValue(double.Parse(data[1]));
             manager.TurnONthePodium();
 
         }

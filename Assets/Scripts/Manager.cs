@@ -11,7 +11,7 @@ public class Manager : MonoBehaviour
     public Musician musician;
     public Color[] ScaleColors;
     public float trustValue;
-    float lastValue=-100;
+    double lastValue=-100f;
 
 
 
@@ -152,27 +152,39 @@ musicianUpdate();
 
     }
 
-    public void updateTrustValue(float v) {
+    public void updateTrustValue(double v) {
 
 
-        if (lastValue != v) {
-            //  trustValue = lastValue-v;
+
+        //  trustValue = lastValue-v;
+
+        if (v != lastValue) {
+
+       
+
+            if (v < lastValue) {
+
+                TrustIndex--;
+               
+            }
+
+            if (v > lastValue) {
+
+
+
+                TrustIndex++;
+
+            }
+
             lastValue = v;
 
 
-
-
-            if (trustValue > lastValue) {
-
-                TrustIndex++;
-            }
-
-            if (trustValue < lastValue) {
-                TrustIndex--;
-            }
-
-
         }
+     
+
+
+
+        
 
     if(TrustIndex>6){
 
