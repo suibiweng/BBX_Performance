@@ -20,7 +20,7 @@ MonoBehaviour:
     x: 2600
     y: -2902
     width: 2473
-    height: 2940
+    height: 2971
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -836,7 +836,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615009}
   - {fileID: 8926484042661614955}
   - {fileID: 8926484042661615342}
-  m_UIPosition: {x: 3674, y: -903}
+  m_UIPosition: {x: 3666, y: -745}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -5369,7 +5369,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 50
+      m_SerializableObject: 100
     m_Space: 2147483647
   m_Property:
     name: True
@@ -9321,7 +9321,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 10
+      m_SerializableObject: 101.8
     m_Space: 2147483647
   m_Property:
     name: dragCoefficient
@@ -9569,7 +9569,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 4430, y: -1451}
+  m_UIPosition: {x: 4332, y: -1241}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -9744,7 +9744,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 100
+      m_SerializableObject: 50
     m_Space: 2147483647
   m_Property:
     name: frequency

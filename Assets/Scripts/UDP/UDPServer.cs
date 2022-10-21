@@ -25,6 +25,34 @@ public class UDPServer : MonoBehaviour
     {
         init();
         OnUDPMessage += LogMessage;
+
+
+       // broadcastMsg("A2");
+    }
+
+    bool oxy_end,oxy_start;
+    private void Update()
+    {
+        if (oxy_end) {
+            oxy_end = false;
+            print("End");
+            manager.TurnONthePodium();
+            manager.musician.MusicBegin = true;
+
+        }
+
+        if (oxy_start) {
+            oxy_start = false;
+
+
+         
+        
+            manager.musician.MusicBegin = false;
+          
+
+
+        }
+
     }
 
     private void LogMessage(string obj)
@@ -33,12 +61,14 @@ public class UDPServer : MonoBehaviour
     //        Debug.Log("Received: " + obj);
         datain=obj;
 
-        if (obj.StartsWith("Podium")) {
+        if (obj.StartsWith("P")) {
 
             string[] data = obj.Split(',');
 
 
             int id = int.Parse(data[1]);
+
+       
             manager.setPodiumColor(id,data[2]);
         }
 
@@ -55,9 +85,24 @@ public class UDPServer : MonoBehaviour
         }
 
         if (obj.StartsWith("oxy_end")) {
+
+            oxy_end = true;
+
+
+           
+
+        }
+
+        if (obj.StartsWith("oxy_start")) {
+
+            //manager.TurnONthePodium();
+            oxy_start = true;
+
             string[] data = obj.Split(',');
+
+           
             manager.updateTrustValue(double.Parse(data[1]));
-            manager.TurnONthePodium();
+
 
         }
 
@@ -100,7 +145,7 @@ public class UDPServer : MonoBehaviour
 
        public void broadcastMsg(string cmd){
        Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-         IPAddress broadcast = IPAddress.Parse("192.168.0.255");
+         IPAddress broadcast = IPAddress.Parse("192.168.1.255");
          byte[] sendbuf = Encoding.ASCII.GetBytes(cmd);
          IPEndPoint ep = new IPEndPoint(broadcast, port);
     

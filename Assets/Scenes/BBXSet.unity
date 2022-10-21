@@ -132,8 +132,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6163784}
+  - component: {fileID: 6163790}
+  - component: {fileID: 6163789}
+  - component: {fileID: 6163788}
+  - component: {fileID: 6163787}
+  - component: {fileID: 6163786}
+  - component: {fileID: 6163785}
+  - component: {fileID: 6163791}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: OSCFromInstrument
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,6 +160,468 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6163785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f8f979447c54247bcba0d5441e6081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _connection: {fileID: 11400000, guid: 58f6b32c3eee932438ad087cc2c341f5, type: 2}
+  _oscAddress: /audio6
+  _dataType: 2
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 25df6b24fe85ade40b3b16de7240a36f, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _intEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _floatEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1952820748}
+        m_TargetAssemblyTypeName: Podium, Assembly-CSharp
+        m_MethodName: hit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  _vector2Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector3Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector4Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector2IntEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector3IntEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6163786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f8f979447c54247bcba0d5441e6081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _connection: {fileID: 11400000, guid: 58f6b32c3eee932438ad087cc2c341f5, type: 2}
+  _oscAddress: /audio5
+  _dataType: 2
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 25df6b24fe85ade40b3b16de7240a36f, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _intEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _floatEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 717438229}
+        m_TargetAssemblyTypeName: Podium, Assembly-CSharp
+        m_MethodName: hit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  _vector2Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector3Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector4Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector2IntEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector3IntEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6163787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f8f979447c54247bcba0d5441e6081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _connection: {fileID: 11400000, guid: 58f6b32c3eee932438ad087cc2c341f5, type: 2}
+  _oscAddress: /audio4
+  _dataType: 2
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 25df6b24fe85ade40b3b16de7240a36f, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _intEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _floatEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1974219895}
+        m_TargetAssemblyTypeName: Podium, Assembly-CSharp
+        m_MethodName: hit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  _vector2Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector3Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector4Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector2IntEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector3IntEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6163788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f8f979447c54247bcba0d5441e6081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _connection: {fileID: 11400000, guid: 58f6b32c3eee932438ad087cc2c341f5, type: 2}
+  _oscAddress: /audio3
+  _dataType: 2
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 25df6b24fe85ade40b3b16de7240a36f, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _intEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _floatEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1614615898}
+        m_TargetAssemblyTypeName: Podium, Assembly-CSharp
+        m_MethodName: hit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  _vector2Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector3Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector4Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector2IntEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector3IntEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6163789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f8f979447c54247bcba0d5441e6081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _connection: {fileID: 11400000, guid: 58f6b32c3eee932438ad087cc2c341f5, type: 2}
+  _oscAddress: /audio2
+  _dataType: 2
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 25df6b24fe85ade40b3b16de7240a36f, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _intEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _floatEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 98685677}
+        m_TargetAssemblyTypeName: Podium, Assembly-CSharp
+        m_MethodName: hit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  _vector2Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector3Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector4Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector2IntEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector3IntEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6163790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163783}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f8f979447c54247bcba0d5441e6081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _connection: {fileID: 11400000, guid: 58f6b32c3eee932438ad087cc2c341f5, type: 2}
+  _oscAddress: /audio1
+  _dataType: 2
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 25df6b24fe85ade40b3b16de7240a36f, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _intEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _floatEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1685943059}
+        m_TargetAssemblyTypeName: Podium, Assembly-CSharp
+        m_MethodName: hit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  _vector2Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector3Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector4Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector2IntEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector3IntEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6163791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f8f979447c54247bcba0d5441e6081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _connection: {fileID: 11400000, guid: 58f6b32c3eee932438ad087cc2c341f5, type: 2}
+  _oscAddress: /audio7
+  _dataType: 2
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1116489987}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _intEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _floatEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1116489991}
+        m_TargetAssemblyTypeName: Musician, Assembly-CSharp
+        m_MethodName: hit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _vector2Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector3Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector4Event:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector2IntEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector3IntEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &98685671
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +635,6 @@ GameObject:
   - component: {fileID: 98685673}
   - component: {fileID: 98685672}
   - component: {fileID: 98685677}
-  - component: {fileID: 98685676}
   m_Layer: 0
   m_Name: P2
   m_TagString: Untagged
@@ -251,41 +719,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &98685676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 98685671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74c3e183ec27ba64d83e010bf18edb92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _useDefaultDevice: 0
-  _deviceID: '{0.0.1.00000000}.{b97ae98e-29bf-408b-a0b4-35bd43631859}'
-  _channel: 1
-  _filterType: 0
-  _autoGain: 1
-  _gain: 6
-  _dynamicRange: 12
-  _smoothFall: 1
-  _fallSpeed: 0.3
-  _propertyBinders:
-  - id: 0
-  references:
-    version: 1
-    00000000:
-      type: {class: Vector3PropertyBinder, ns: Lasp, asm: Lasp.Runtime}
-      data:
-        Enabled: 1
-        Target: {fileID: 98685672}
-        PropertyName: size
-        _propertyType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        Value0: {x: 0, y: 0, z: 0}
-        Value1: {x: 1, y: 1, z: 1}
 --- !u!114 &98685677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,12 +735,15 @@ MonoBehaviour:
   Vfx: {fileID: 0}
   isLocked: 0
   ison: 0
-  Far: 3
-  Near: -1
+  Far: 7
+  Near: -5
+  DB: 0
+  upperDB: -30
+  lowerDB: -85
   amt: 0
   ID: 0
   animator: {fileID: 0}
-  setColor: {r: 0.9056604, g: 0.11534355, b: 0.11534355, a: 0}
+  setColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &112711708
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,13 +1143,13 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 2.43
+      - m_Value: -2
         m_Name: PosZ
         m_Overridden: 1
       - m_Value: 0.75
         m_Name: New float
         m_Overridden: 1
-      - m_Value: 2.78
+      - m_Value: 0.8
         m_Name: Range
         m_Overridden: 1
       - m_Value: 4
@@ -737,7 +1173,7 @@ VisualEffect:
         m_Overridden: 1
     m_Vector4f:
       m_Array:
-      - m_Value: {x: 0.5188679, y: 0.5188679, z: 0.5188679, w: 1}
+      - m_Value: {x: 1, y: 0.13192494, z: 0, w: 1}
         m_Name: PodColor
         m_Overridden: 1
     m_Uint:
@@ -1926,7 +2362,6 @@ GameObject:
   - component: {fileID: 717438225}
   - component: {fileID: 717438224}
   - component: {fileID: 717438229}
-  - component: {fileID: 717438228}
   m_Layer: 0
   m_Name: P5
   m_TagString: Untagged
@@ -2011,41 +2446,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &717438228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717438223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74c3e183ec27ba64d83e010bf18edb92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _useDefaultDevice: 0
-  _deviceID: '{0.0.1.00000000}.{971728a7-6205-4bc9-81e7-41c18fa4d736}'
-  _channel: 4
-  _filterType: 0
-  _autoGain: 1
-  _gain: 6
-  _dynamicRange: 12
-  _smoothFall: 1
-  _fallSpeed: 0.3
-  _propertyBinders:
-  - id: 0
-  references:
-    version: 1
-    00000000:
-      type: {class: Vector3PropertyBinder, ns: Lasp, asm: Lasp.Runtime}
-      data:
-        Enabled: 1
-        Target: {fileID: 717438224}
-        PropertyName: size
-        _propertyType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        Value0: {x: 0, y: 0, z: 0}
-        Value1: {x: 1, y: 1, z: 1}
 --- !u!114 &717438229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2064,10 +2464,13 @@ MonoBehaviour:
   ison: 0
   Far: 3
   Near: -1
+  DB: 0
+  upperDB: -30
+  lowerDB: -85
   amt: 0
   ID: 0
   animator: {fileID: 0}
-  setColor: {r: 1, g: 0.7897512, b: 0.0990566, a: 1}
+  setColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1041378660
 GameObject:
   m_ObjectHideFlags: 0
@@ -2238,17 +2641,13 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 6.44
+      - m_Value: -16.04
         m_Name: PosZ
         m_Overridden: 1
-      - m_Value: 2
+      - m_Value: 0.5
         m_Name: New float
         m_Overridden: 1
-<<<<<<< HEAD
-      - m_Value: 2.07
-=======
-      - m_Value: 1.76
->>>>>>> 4d3bb902e24b6714485045061c019bf1480a9c2b
+      - m_Value: 2.59
         m_Name: Radius
         m_Overridden: 1
     m_Vector2f:
@@ -2306,24 +2705,24 @@ VisualEffect:
         m_Overridden: 1
       - m_Value:
           serializedVersion: 2
-          key0: {r: 1, g: 1, b: 1, a: 1}
-          key1: {r: 1, g: 0, b: 0.27686834, a: 1}
-          key2: {r: 1, g: 0.7213867, b: 0, a: 0}
-          key3: {r: 1, g: 0, b: 0.38341904, a: 0}
-          key4: {r: 1, g: 1, b: 1, a: 0.20784314}
-          key5: {r: 1, g: 1, b: 1, a: 0}
+          key0: {r: 0, g: 0, b: 0, a: 0}
+          key1: {r: 0, g: 0.75741893, b: 0.9433962, a: 1}
+          key2: {r: 0.12434556, g: 0.81848586, b: 1.25, a: 0}
+          key3: {r: 0.56999296, g: 1.0391752, b: 3.2020197, a: 0}
+          key4: {r: 1.2146596, g: 1.4960555, b: 3.9999995, a: 0.20784314}
+          key5: {r: 12, g: 10, b: 2.5, a: 0}
           key6: {r: 1, g: 1, b: 1, a: 0}
           key7: {r: 0, g: 0, b: 0, a: 0}
           ctime0: 0
-          ctime1: 6361
-          ctime2: 34117
-          ctime3: 53006
-          ctime4: 65535
+          ctime1: 19661
+          ctime2: 32768
+          ctime3: 44718
+          ctime4: 58982
           ctime5: 65535
           ctime6: 65535
           ctime7: 0
           atime0: 0
-          atime1: 31418
+          atime1: 65535
           atime2: 65535
           atime3: 65535
           atime4: 65535
@@ -2331,8 +2730,8 @@ VisualEffect:
           atime6: 0
           atime7: 0
           m_Mode: 0
-          m_NumColorKeys: 5
-          m_NumAlphaKeys: 3
+          m_NumColorKeys: 6
+          m_NumAlphaKeys: 2
         m_Name: Color
         m_Overridden: 1
     m_NamedObject:
@@ -2395,12 +2794,17 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  Near: 0
-  Far: 0
-  BigR: 0.4
-  SmallR: 2.25
+  Near: 4.82
+  Far: -16
+  BigR: 2.59
+  SmallR: 0.4
   Radius: 0
   amt: 0
+  DB: 0
+  upperDB: -30
+  lowerDB: -85
+  DBamt: 0
+  MusicBegin: 1
 --- !u!1 &1127172907
 GameObject:
   m_ObjectHideFlags: 0
@@ -3363,13 +3767,13 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: -2.93
+      - m_Value: -1.69
         m_Name: PosZ
         m_Overridden: 1
       - m_Value: 0.75
         m_Name: New float
         m_Overridden: 1
-      - m_Value: 1
+      - m_Value: 0.5
         m_Name: Range
         m_Overridden: 1
       - m_Value: 8
@@ -3529,19 +3933,19 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: -1.35
+      - m_Value: -1.25
         m_Name: PosZ
         m_Overridden: 1
       - m_Value: 0.75
         m_Name: New float
         m_Overridden: 1
-      - m_Value: 1
+      - m_Value: 0.8
         m_Name: Range
         m_Overridden: 1
-      - m_Value: 7
+      - m_Value: 3
         m_Name: Turbulence1
         m_Overridden: 1
-      - m_Value: 3
+      - m_Value: 2
         m_Name: Turbulence2
         m_Overridden: 1
     m_Vector2f:
@@ -3554,12 +3958,12 @@ VisualEffect:
       - m_Value: {x: 115.76, y: 169.61, z: 193.25}
         m_Name: New Position_position
         m_Overridden: 1
-      - m_Value: {x: 10, y: -0.47, z: 5}
+      - m_Value: {x: 10, y: 1.35, z: 5}
         m_Name: Target_position
         m_Overridden: 1
     m_Vector4f:
       m_Array:
-      - m_Value: {x: 0.4842608, y: 1, z: 0, w: 1}
+      - m_Value: {x: 0, y: 1, z: 0.10293579, w: 1}
         m_Name: PodColor
         m_Overridden: 1
     m_Uint:
@@ -3695,13 +4099,13 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: -1.05
+      - m_Value: 0.63
         m_Name: PosZ
         m_Overridden: 1
       - m_Value: 0.75
         m_Name: New float
         m_Overridden: 1
-      - m_Value: 1
+      - m_Value: 0.5
         m_Name: Range
         m_Overridden: 1
       - m_Value: 8
@@ -3786,7 +4190,6 @@ GameObject:
   - component: {fileID: 1614615894}
   - component: {fileID: 1614615893}
   - component: {fileID: 1614615898}
-  - component: {fileID: 1614615897}
   m_Layer: 0
   m_Name: P3
   m_TagString: Untagged
@@ -3871,41 +4274,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1614615897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1614615892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74c3e183ec27ba64d83e010bf18edb92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _useDefaultDevice: 0
-  _deviceID: '{0.0.1.00000000}.{b97ae98e-29bf-408b-a0b4-35bd43631859}'
-  _channel: 2
-  _filterType: 0
-  _autoGain: 1
-  _gain: 6
-  _dynamicRange: 12
-  _smoothFall: 1
-  _fallSpeed: 0.3
-  _propertyBinders:
-  - id: 0
-  references:
-    version: 1
-    00000000:
-      type: {class: Vector3PropertyBinder, ns: Lasp, asm: Lasp.Runtime}
-      data:
-        Enabled: 1
-        Target: {fileID: 1614615893}
-        PropertyName: size
-        _propertyType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        Value0: {x: 0, y: 0, z: 0}
-        Value1: {x: 1, y: 1, z: 1}
 --- !u!114 &1614615898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3922,12 +4290,15 @@ MonoBehaviour:
   Vfx: {fileID: 0}
   isLocked: 0
   ison: 0
-  Far: 3
-  Near: -1
+  Far: 7
+  Near: -2
+  DB: 0
+  upperDB: -30
+  lowerDB: -85
   amt: 0
   ID: 0
   animator: {fileID: 0}
-  setColor: {r: 1, g: 0.43164754, b: 0, a: 1}
+  setColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1685943053
 GameObject:
   m_ObjectHideFlags: 0
@@ -3941,7 +4312,6 @@ GameObject:
   - component: {fileID: 1685943055}
   - component: {fileID: 1685943054}
   - component: {fileID: 1685943059}
-  - component: {fileID: 1685943058}
   m_Layer: 0
   m_Name: P1
   m_TagString: Untagged
@@ -4026,41 +4396,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1685943058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1685943053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74c3e183ec27ba64d83e010bf18edb92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _useDefaultDevice: 0
-  _deviceID: '{0.0.1.00000000}.{b97ae98e-29bf-408b-a0b4-35bd43631859}'
-  _channel: 0
-  _filterType: 0
-  _autoGain: 1
-  _gain: 6
-  _dynamicRange: 12
-  _smoothFall: 1
-  _fallSpeed: 0.3
-  _propertyBinders:
-  - id: 0
-  references:
-    version: 1
-    00000000:
-      type: {class: Vector3PropertyBinder, ns: Lasp, asm: Lasp.Runtime}
-      data:
-        Enabled: 1
-        Target: {fileID: 1685943054}
-        PropertyName: size
-        _propertyType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        Value0: {x: 0, y: 0, z: 0}
-        Value1: {x: 1, y: 1, z: 1}
 --- !u!114 &1685943059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4077,12 +4412,15 @@ MonoBehaviour:
   Vfx: {fileID: 0}
   isLocked: 0
   ison: 0
-  Far: 3
-  Near: -1
+  Far: 5
+  Near: -2
+  DB: 0
+  upperDB: -30
+  lowerDB: -85
   amt: 0
   ID: 0
   animator: {fileID: 0}
-  setColor: {r: 1, g: 1, b: 1, a: 1}
+  setColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1823688464
 GameObject:
   m_ObjectHideFlags: 0
@@ -4292,7 +4630,6 @@ GameObject:
   - component: {fileID: 1935305078}
   - component: {fileID: 1935305079}
   - component: {fileID: 1935305080}
-  - component: {fileID: 1935305081}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -4327,21 +4664,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   podiums:
-  - {fileID: 1952820748}
-  - {fileID: 98685677}
-  - {fileID: 1974219895}
   - {fileID: 1685943059}
+  - {fileID: 98685677}
   - {fileID: 1614615898}
+  - {fileID: 1974219895}
   - {fileID: 717438229}
+  - {fileID: 1952820748}
   musician: {fileID: 1116489991}
   ScaleColors:
-  - {r: 0.87843144, g: 0.40000004, b: 0.40000004, a: 1}
-  - {r: 0.5764706, g: 0.7686275, b: 0.4901961, a: 1}
-  - {r: 0.427451, g: 0.61960787, b: 0.9215687, a: 1}
-  - {r: 0.96470594, g: 0.69803923, b: 0.41960788, a: 1}
-  - {r: 1, g: 0.85098046, b: 0.40000004, a: 1}
-  - {r: 0.5568628, g: 0.48627454, b: 0.76470596, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0, g: 1, b: 0.0025258064, a: 1}
+  - {r: 0, g: 0.7421942, b: 1, a: 1}
+  - {r: 1, g: 0.5615012, b: 0, a: 1}
+  - {r: 1, g: 0.97243285, b: 0, a: 1}
+  - {r: 0.8679245, g: 0.33161268, b: 0.7933992, a: 1}
   trustValue: 0
+  uDPServer: {fileID: 1935305080}
   Musiciangradient:
     serializedVersion: 2
     key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4386,21 +4724,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   datain: 
   manager: {fileID: 1935305079}
-  port: 8001
+  port: 8888
   PrintDebug: 1
---- !u!114 &1935305081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935305077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc6d0676aa25b4947a3cee0c4b4bcad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PORT: 8888
 --- !u!1 &1952820742
 GameObject:
   m_ObjectHideFlags: 0
@@ -4414,7 +4739,6 @@ GameObject:
   - component: {fileID: 1952820744}
   - component: {fileID: 1952820743}
   - component: {fileID: 1952820748}
-  - component: {fileID: 1952820749}
   m_Layer: 0
   m_Name: P6
   m_TagString: Untagged
@@ -4516,46 +4840,14 @@ MonoBehaviour:
   isLocked: 0
   ison: 0
   Far: 3
-  Near: -1
+  Near: -1.5
+  DB: 0
+  upperDB: -30
+  lowerDB: -85
   amt: 0
   ID: 0
   animator: {fileID: 0}
-  setColor: {r: 1, g: 1, b: 1, a: 0}
---- !u!114 &1952820749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952820742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74c3e183ec27ba64d83e010bf18edb92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _useDefaultDevice: 0
-  _deviceID: '{0.0.1.00000000}.{971728a7-6205-4bc9-81e7-41c18fa4d736}'
-  _channel: 5
-  _filterType: 0
-  _autoGain: 1
-  _gain: 6
-  _dynamicRange: 12
-  _smoothFall: 1
-  _fallSpeed: 0.3
-  _propertyBinders:
-  - id: 0
-  references:
-    version: 1
-    00000000:
-      type: {class: Vector3PropertyBinder, ns: Lasp, asm: Lasp.Runtime}
-      data:
-        Enabled: 1
-        Target: {fileID: 1952820743}
-        PropertyName: size
-        _propertyType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        Value0: {x: 0, y: 0, z: 0}
-        Value1: {x: 1, y: 1, z: 1}
+  setColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1974219889
 GameObject:
   m_ObjectHideFlags: 0
@@ -4569,7 +4861,6 @@ GameObject:
   - component: {fileID: 1974219891}
   - component: {fileID: 1974219890}
   - component: {fileID: 1974219895}
-  - component: {fileID: 1974219894}
   m_Layer: 0
   m_Name: P4
   m_TagString: Untagged
@@ -4654,41 +4945,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1974219894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974219889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74c3e183ec27ba64d83e010bf18edb92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _useDefaultDevice: 0
-  _deviceID: '{0.0.1.00000000}.{971728a7-6205-4bc9-81e7-41c18fa4d736}'
-  _channel: 3
-  _filterType: 0
-  _autoGain: 1
-  _gain: 6
-  _dynamicRange: 12
-  _smoothFall: 1
-  _fallSpeed: 0.3
-  _propertyBinders:
-  - id: 0
-  references:
-    version: 1
-    00000000:
-      type: {class: Vector3PropertyBinder, ns: Lasp, asm: Lasp.Runtime}
-      data:
-        Enabled: 1
-        Target: {fileID: 1974219890}
-        PropertyName: size
-        _propertyType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        Value0: {x: 0, y: 0, z: 0}
-        Value1: {x: 1, y: 1, z: 1}
 --- !u!114 &1974219895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4705,12 +4961,15 @@ MonoBehaviour:
   Vfx: {fileID: 0}
   isLocked: 0
   ison: 0
-  Far: 3
-  Near: -1
+  Far: 5
+  Near: -1.25
+  DB: 0
+  upperDB: -30
+  lowerDB: -85
   amt: 0
   ID: 0
   animator: {fileID: 0}
-  setColor: {r: 0.021137413, g: 0.16628045, b: 0.8962264, a: 1}
+  setColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2013410473
 GameObject:
   m_ObjectHideFlags: 1

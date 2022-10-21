@@ -10,26 +10,28 @@ public class Manager : MonoBehaviour
 
     public Musician musician;
     public Color[] ScaleColors;
-    public float trustValue;
+    public double trustValue;
     double lastValue=-100f;
 
 
-
+    public UDPServer uDPServer;
     public Gradient Musiciangradient;
     GradientColorKey[] colorKey;
     GradientAlphaKey[] alphaKey;
 
 
 
-    public int TrustIndex=0;
+    public int TrustIndex=3;
 
     // Start is called before the first frame update
     void Start()
     {
-
-        Musiciangradient=new Gradient();
+        TrustIndex = 2;
+       
+        Musiciangradient =new Gradient();
         colorKey = new GradientColorKey[6];
         alphaKey = new GradientAlphaKey[2];
+
 
     }
 
@@ -38,7 +40,19 @@ public class Manager : MonoBehaviour
     {
 
 
-musicianUpdate();
+        musicianUpdate();
+
+
+
+        if (Input.GetKeyDown(KeyCode.Space)) {
+          
+            TurnONthePodium();
+            //musician.MusicBegin = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            musician.MusicBegin = false;
+        }
 
 
         
@@ -79,8 +93,12 @@ musicianUpdate();
 
 
 
-  public  void TurnONthePodium(){
-        for(int i=0 ; i<podiums.Length; i++){
+  public void TurnONthePodium(){
+
+
+//        uDPServer.broadcastMsg("A0");
+
+        for (int i=0 ; i<podiums.Length; i++){
             
             if(i<=TrustIndex){
                 podiums[i].setOnoff(true);
@@ -91,8 +109,13 @@ musicianUpdate();
             
         }
 
+        uDPServer.broadcastMsg("A3");
+
 
     }
+
+
+   
 
     int ReturnColors(string color) {
 
@@ -136,9 +159,10 @@ musicianUpdate();
     }
 
     public void ResetSystem() {
+        /*
         foreach (var p in podiums) {
             p.isLocked = false;
-        }
+        }*/
 
     }
 
@@ -160,19 +184,19 @@ musicianUpdate();
 
         if (v != lastValue) {
 
-       
 
-            if (v < lastValue) {
+            trustValue = lastValue - v;
+            if (trustValue>=0) {
 
-                TrustIndex--;
+                TrustIndex++;
                
             }
 
-            if (v > lastValue) {
+            if (trustValue < 0) {
 
 
 
-                TrustIndex++;
+                TrustIndex--;
 
             }
 
