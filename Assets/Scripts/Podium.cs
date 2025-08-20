@@ -64,13 +64,14 @@ public class Podium : MonoBehaviour
 
         if (on) {
             ison = true;
-            //SendBackUdp.broadcastTo("Podium:"+ID+",on");
-            Vfx.Play();
+
+            Vfx.gameObject.SetActive(on);
 
         } else {
             ison = false;
-            //      SendBackUdp.broadcastTo("Podium:"+ID+",off");
-            Vfx.Stop();
+
+
+            Vfx.gameObject.SetActive(on);
         }
 
 

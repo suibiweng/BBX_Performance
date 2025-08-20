@@ -36,6 +36,7 @@ public class UDPServer : MonoBehaviour
         if (oxy_end) {
             oxy_end = false;
             print("End");
+           
             manager.TurnONthePodium();
             manager.musician.MusicBegin = true;
 
@@ -57,8 +58,8 @@ public class UDPServer : MonoBehaviour
 
     private void LogMessage(string obj)
     {
-       // if (PrintDebug)
-    //        Debug.Log("Received: " + obj);
+        if (PrintDebug)
+           Debug.Log("Received: " + obj);
         datain=obj;
 
         if (obj.StartsWith("P")) {
@@ -86,10 +87,21 @@ public class UDPServer : MonoBehaviour
 
         if (obj.StartsWith("oxy_end")) {
 
+        
             oxy_end = true;
 
+            string[] data = obj.Split(',');
+            
 
-           
+            print(obj);
+            if (data.Length > 2) {
+                manager.TrustIndex = (int.Parse(data[2]));
+            } else {
+                manager.updateTrustValue(double.Parse(data[1]));
+            }
+            
+
+
 
         }
 

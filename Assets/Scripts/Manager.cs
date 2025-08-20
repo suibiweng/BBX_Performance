@@ -21,12 +21,13 @@ public class Manager : MonoBehaviour
 
 
 
-    public int TrustIndex=3;
+    public int TrustIndex=5;
 
     // Start is called before the first frame update
     void Start()
     {
-        TrustIndex = 2;
+        TrustIndex = 4;
+   
        
         Musiciangradient =new Gradient();
         colorKey = new GradientColorKey[6];
@@ -55,7 +56,50 @@ public class Manager : MonoBehaviour
         }
 
 
-        
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            TrustIndex = 1;
+            TurnONthePodium();
+
+
+        }
+
+
+
+        if (Input.GetKeyDown(KeyCode.Alpha2)) {
+            TrustIndex = 2;
+            TurnONthePodium();
+        }
+
+
+
+        if (Input.GetKeyDown(KeyCode.Alpha3)) {
+            TrustIndex = 3;
+            TurnONthePodium();
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.Alpha4)) {
+            TrustIndex = 4;
+            TurnONthePodium();
+        }
+
+
+
+        if (Input.GetKeyDown(KeyCode.Alpha5)) {
+            TrustIndex = 5;
+            TurnONthePodium();
+
+        }
+
+
+
+        if (Input.GetKeyDown(KeyCode.Alpha6)) {
+            TrustIndex = 6;
+            TurnONthePodium();
+        }
+
+
+
     }
 
     void musicianUpdate(){
@@ -96,7 +140,7 @@ public class Manager : MonoBehaviour
   public void TurnONthePodium(){
 
 
-//        uDPServer.broadcastMsg("A0");
+       uDPServer.broadcastMsg("A0");
 
         for (int i=0 ; i<podiums.Length; i++){
             
@@ -106,10 +150,17 @@ public class Manager : MonoBehaviour
 
                 podiums[i].setOnoff(false);
             }
+
+            podiums[i].isLocked = false;
             
         }
 
-        uDPServer.broadcastMsg("A3");
+        
+        int d = TrustIndex ;
+        if (TrustIndex == 0)
+            d = 2;
+
+       uDPServer.broadcastMsg("A"+d);
 
 
     }
